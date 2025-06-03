@@ -58,12 +58,12 @@ const miniApp = useMiniApp()
   <header class="container max-w-screen-xl mx-auto py-4 px-4">
     <h2 class="header-title font-semibold text-2xl">{{ pageStore.title }}</h2>
   </header>
-  <ul>
+  <!--<ul>
       <li><NuxtLink to="/">Index</NuxtLink></li>
       <li><NuxtLink to="/description-of-service">/description-of-service</NuxtLink></li>
       <li><NuxtLink to="/select-city">/select-city</NuxtLink></li>
       <li><NuxtLink to="/finish">/finish</NuxtLink></li>
-  </ul>
+  </ul>-->
   <main class="px-4 pb-20 max-w-screen-xl mx-auto">
      <div v-if="isLoading" class="loading-overlay"></div>
       <slot v-if="!isLoading"/>
