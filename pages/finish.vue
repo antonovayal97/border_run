@@ -13,9 +13,9 @@
 
   backButtonStore.setIsVisible(false);
 
-  //if (orderStore.cityId === null) {
-  //  await navigateTo('/')
-  //}
+  if (orderStore.cityId === null) {
+    await navigateTo('/')
+  }
 
   async function sendOrder() {
   const url = 'https://n8n-antonovayal97.amvera.io/webhook/5adb16be-8bb7-42f8-9be6-a47f56d2de76';
@@ -58,13 +58,13 @@
 }
 
 // Вызов функции
-//sendOrder().then(data => {
-//  console.log('Заказ отправлен:', data);
-  //finish_success.value = true;
-//}).catch(error => {
-//  console.error('Ошибка:', error);
+sendOrder().then(data => {
+  console.log('Заказ отправлен:', data);
+  finish_success.value = true;
+}).catch(error => {
+  console.error('Ошибка:', error);
   finish_fail.value = true;
-//});
+});
 
 </script>
 
