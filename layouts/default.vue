@@ -54,6 +54,15 @@ const miniApp = useMiniApp()
     }, 500);
   }
 
+
+document.addEventListener('click', (event) => {
+  var tags = ['INPUT', 'TEXTAREA']
+  var focused = document.activeElement
+  if (focused && focused !== event.target && tags.includes(focused.tagName))
+  {
+    focused.blur()
+  }
+})
 </script>
 <template>
   <header class="container max-w-screen-xl mx-auto py-4 px-4">
@@ -79,7 +88,7 @@ const miniApp = useMiniApp()
   width: 100vw;
   height: 100vh;
   z-index: 999;
-  background-color: var(--color-white);
+  background-color: var(--ui-bg);
 }
 .loading-overlay::after {
   position: absolute;
