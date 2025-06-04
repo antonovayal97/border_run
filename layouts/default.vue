@@ -46,6 +46,7 @@ const miniApp = useMiniApp()
   } catch (err: any) {
     error.value = err.message || 'Unexpected error'
     console.error('Validation error:', err)
+    miniApp.close()
   } finally {
 
     setTimeout(() => {
